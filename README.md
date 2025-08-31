@@ -17,20 +17,15 @@
 
 ## 1. Install Nvidia Driver and CUDA Toolkit
 
-### 1.0  Once booted into Ubuntu, log in as the `libin` user.
+### 1.0  Once booted into Ubuntu, log in as your default user.
 
-### 1.1  Switch to the root user:
-```bash
-sudo su
-```
-
-### 1.2  Install necessary dependencies:
+### 1.1 Install necessary dependencies:
 ```bash
 sudo apt update
 sudo apt install build-essential
 ```
 
-### 1.3  Install CUDA and Nvidia drivers:
+### 1.2  Install CUDA and Nvidia drivers:
 ```bash
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
@@ -43,16 +38,16 @@ sudo apt-get install -y nvidia-open
 > - You can follow the official guide here: [NVIDIA CUDA Downloads](https://developer.nvidia.com/cuda-downloads)  
 > - If the system hangs, simply reboot it manually.
 
-### 1.4  Reboot the system:
+### 1.3  Reboot the system:
 ```bash
 sudo reboot
 ```
 
 > 💡 If the `reboot` command doesn't work, manually restart the machine.
 
-### 1.5  After rebooting, log in again as `libin` and switch to `root`.
+### 1.4  After rebooting, log in again as your default username.
 
-### 1.6  Check if the installation is successful:
+### 1.5  Check if the installation is successful:
 ```bash
 sudo systemctl start nvidia-persistenced
 sudo systemctl enable nvidia-persistenced
